@@ -1,0 +1,55 @@
+.blog {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  .blog h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .post {
+    flex-basis: 600px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    text-align: left;
+  }
+  
+  .post h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .post .date {
+    font-size: 0.8em;
+    margin-bottom: 20px;
+  }
+  
+  .post div {
+    line-height: 1.6;
+    font-size: 1.1em;
+  }
+  
+  .post img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .post hr {
+    margin-top: 20px;
+    border: none;
+    border-top: 1px solid #ddd;
+  }
+  

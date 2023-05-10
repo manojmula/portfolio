@@ -1,0 +1,67 @@
+<section class="hero">
+    <div class="hero-content">
+      <h1>Hello, I'm Manoj Mulakala</h1>
+      <p>Crafting beautiful web experiences through a blend of clean design and innovative functionality</p>
+      <button class="cta-button" (click)="scrollToPortfolio()">Explore My Work</button>
+    </div>
+  </section>
+  
+
+  <section class="about-me">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <!-- <img src="assets/your-image.jpg" alt="Your Name" class="profile-pic"> -->
+      <div class="about-text">
+        <p>Hi there! I'm a full-stack web developer based in Banglore. I have a passion for creating interactive, responsive, and user-friendly websites and applications.</p>
+        <p>With a background in [Your Background], I'm proficient in a range of languages and frameworks including HTML5, CSS3, JavaScript, and Angular. I love problem-solving, learning new technologies, and applying my skills to real-world challenges.</p>
+        <p>When I'm not coding for anyone else, you'll find me coding for myself.</p>
+      </div>
+    </div>
+  </section>
+  
+  <section class="skills">
+    <h2>Skills</h2>
+    <div class="skills-content">
+      <div *ngFor="let skill of skills" class="skill-card">
+        <img [src]="'assets/images/' + skill.logo" alt="{{skill.name}}" class="skill-logo">
+        <h3>{{skill.name}}</h3>
+        <p>{{skill.description}}</p>
+      </div>
+    </div>
+  </section>
+
+
+  
+
+  <section class="npm">
+    <h2>NPM Packages I've Used</h2>
+    <div class="packages">
+      <div *ngFor="let pkg of packages" class="package-card">
+        <a href="{{pkg.link}}" target="_blank">
+            <img [src]="'assets/images/' + pkg.image" alt="{{pkg.title}} logo" class="package-logo">
+          <h3>{{pkg.title}}</h3>
+          <p>{{pkg.description}}</p>
+        </a>
+        <div class="keywords">
+          <span *ngFor="let keyword of pkg.keywords">{{keyword}}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  
+  <section class="portfolio">
+  <h2>Portfolio</h2>
+  <div class="projects">
+    <div *ngFor="let project of projects" class="project-card">
+      <a href="{{project.link}}" target="_blank">
+        <img [src]="'assets/images/' + project.image" alt="{{project.title}}" class="project-image">
+        <h3>{{project.title}}</h3>
+        <p>{{project.description}}</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+  

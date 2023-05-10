@@ -1,0 +1,46 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #444;
+  }
+  
+  .logo a {
+    font-size: 24px;
+    color: #FFF;
+    text-decoration: none;
+  }
+  
+  .navigation ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .navigation ul li {
+    display: inline;
+    margin-left: 20px;
+  }
+  
+  .navigation ul li a {
+    color: #FFF;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .navigation ul li a:hover {
+    color: #007BFF;
+  }
+  
+  h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #FFF;
+  }
+  
+  p {
+    color: #CCC;
+  }
+  
+  
+  
+  
