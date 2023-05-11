@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { NgTerminal, NgTerminalModule } from 'ng-terminal';
 
@@ -37,6 +37,7 @@ interface BlogPost {
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+  isUserInteraction = false;
 
 
   constructor(
@@ -239,21 +240,32 @@ export class HomeComponent {
     // Add as many projects as you need...
   ];
 
+  @ViewChild('audioPlayer') audioPlayerRef!: ElementRef;
+
+  playSound() {
+    this.isUserInteraction = true;
+    const audioPlayer = this.audioPlayerRef.nativeElement as HTMLAudioElement;
+    audioPlayer.play();
+  }
+
   @ViewChild('term', {static: false}) child !: NgTerminal;
-  prompt = 'Hello';
+  prompt = `\n\n\n\n
+  \n\n\n\n\n\nHello, I'm Manoj Mulakala, Crafting beautiful web experiences through a blend of clean design and innovative functionality`;
   ngAfterViewInit(){
+
+    let i = 0;
+    setInterval(()=>{
+      if(i < this.prompt.length)
+      {
+        this.child.write(this.prompt[i]);
+        i++;
+        this.playSound();
+      }
+      
+    }, 100)
     this.child.onData().subscribe((input) => {
-      if (input === '\r') { // Carriage Return (When Enter is pressed)
-        this.child.write(this.prompt);
-      } else if (input === '\u007f') { // Delete (When Backspace is pressed)
-        if (this.child.underlying.buffer.active.cursorX > 2) {
-          this.child.write('\b \b');
-        }
-      } else if (input === '\u0003') { // End of Text (When Ctrl and C are pressed)
-          this.child.write('^C');
-          this.child.write(this.prompt);
-      }else
-        this.child.write(input);
+        console.log(input)
+        // this.child.write(input);
     });
   }
 }
