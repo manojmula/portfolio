@@ -24,6 +24,15 @@
     margin: 0rem;
     font-family: 'Roboto', sans-serif;
   }
+
+  *{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
   
   h1, h2, h3 {
     font-family: 'Montserrat', sans-serif;

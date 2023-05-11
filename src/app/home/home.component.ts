@@ -262,7 +262,7 @@ export class HomeComponent {
         this.playSound();
       }
       
-    }, 100)
+    }, 20)
     this.child.onData().subscribe((input) => {
         console.log(input)
         // this.child.write(input);
