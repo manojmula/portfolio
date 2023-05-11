@@ -70,7 +70,7 @@ export class HomeComponent {
   packages: NpmPackage[] = [
     {
       title: 'Express JS',
-      description: 'Another description of your package.',
+      description: 'Most award .',
       image : 'express.png',
       keywords: ['npm', 'module', 'tool'],
       link: 'https://expressjs.com/'

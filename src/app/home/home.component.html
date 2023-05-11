@@ -51,7 +51,7 @@
         <a href="{{pkg.link}}" target="_blank">
             <img *ngIf="pkg.image" [src]="'assets/images/' + pkg.image" alt="{{pkg.title}} logo" class="package-logo">
           <h3>{{pkg.title}}</h3>
-          <p>{{pkg.description}}</p>
+          <!-- <p>{{pkg.description}}</p> -->
         </a>
         <div class="keywords">
           <span *ngFor="let keyword of pkg.keywords">{{keyword}}</span>
