@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { NgTerminal, NgTerminalModule } from 'ng-terminal';
+
 
 interface Skill {
   name: string;
@@ -236,4 +238,22 @@ export class HomeComponent {
     
     // Add as many projects as you need...
   ];
+
+  @ViewChild('term', {static: false}) child !: NgTerminal;
+  prompt = 'Hello';
+  ngAfterViewInit(){
+    this.child.onData().subscribe((input) => {
+      if (input === '\r') { // Carriage Return (When Enter is pressed)
+        this.child.write(this.prompt);
+      } else if (input === '\u007f') { // Delete (When Backspace is pressed)
+        if (this.child.underlying.buffer.active.cursorX > 2) {
+          this.child.write('\b \b');
+        }
+      } else if (input === '\u0003') { // End of Text (When Ctrl and C are pressed)
+          this.child.write('^C');
+          this.child.write(this.prompt);
+      }else
+        this.child.write(input);
+    });
+  }
 }

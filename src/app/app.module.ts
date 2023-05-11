@@ -10,6 +10,8 @@ import { HomeComponent } from './home/home.component';
 import { BlogComponent } from './blog/blog.component';
 import { ReadBlogComponent } from './read-blog/read-blog.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NgTerminalModule } from 'ng-terminal';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgTerminalModule
   ],
   providers: [],
   bootstrap: [AppComponent]
