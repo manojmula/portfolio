@@ -43,7 +43,7 @@ export class HomeComponent {
   {
    
   }
-
+  
   scrollToPortfolio() {
     // Implement scrolling to portfolio section here
   }

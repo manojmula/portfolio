@@ -1,0 +1,44 @@
+<h1>Managing Optional Parameters in Sequelize</h1>
+<p>Sequelize is an Object-Relational Mapping (ORM) library that's often compared with Prisma. In my projects, I've frequently employed Sequelize. One issue I have encountered is handling optional parameters when querying a SQL table. How can we search for data using an AND combination when the parameters derived from user input are optional?</p>
+<p>First, let's clarify how to use the AND operator in Sequelize. Here's an example querying a POST table:</p>
+<pre>
+<code>
+    const { Op } = require('@sequelize/core');
+    
+    Post.findAll({
+      where: {
+        [Op.and]: [
+          { authorId: 12 },
+          { status: 'active' }
+        ]
+      }
+    });
+</code>
+</pre>
+<p>In this instance, we might want to make the authorId and status optional from the front end. There could be times when the authorId may not be present, or the status may not be present, or both might be present.</p>
+<p>So, how can we handle this scenario? Consider the following approach:</p>
+<pre>
+<code>
+    const { Op } = require('@sequelize/core');
+    
+    let authorId = req.body.authorId ? 
+    { authorId : req.body.authorId } : undefined;
+    let status = req.body.status ? 
+    { status : req.body.status } : undefined;
+
+    Post.findAll({
+      where: {
+        [Op.and]: [
+            authorId,
+            status
+        ]
+      }
+    });
+</code>
+</pre>
+<p>In this case, Sequelize conveniently ignores undefined parameters in the array when generating the SQL query. This solution may not be the most sophisticated, but it's one of the simplest I've found for handling optional parameters.</p>
+
+
+
+
+

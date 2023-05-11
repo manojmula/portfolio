@@ -1,0 +1,31 @@
+.blog-container {
+    max-width: 40em;
+    margin: 0 auto;
+    padding: 5px;
+    font-family: Georgia,serif;
+    font-size: 20px;
+    line-height: 30px;
+    background-color: #fff;
+    color: #000;
+    text-align: justify;
+    /* text-align-last: center; */
+}
+
+
+/* For tablet devices */
+@media only screen and (max-width: 768px) {
+    .blog-container {
+        max-width: 100%;
+        font-size: 18px;
+        line-height: 26px;
+    }
+}
+
+/* For mobile devices */
+@media only screen and (max-width: 480px) {
+    .blog-container {
+        max-width: 100%;
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
