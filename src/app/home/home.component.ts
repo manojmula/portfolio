@@ -250,7 +250,7 @@ export class HomeComponent {
 
   @ViewChild('term', {static: false}) child !: NgTerminal;
   prompt = `\n\n\n\n
-  \n\n\n\n\n\nHello, I'm Manoj Mulakala, Crafting beautiful web experiences through a blend of clean design and innovative functionality`;
+  \n\n\n\n\n\nHello, I'm Manoj Mulakala, Journeying through the world of web development, I've discovered a powerful alliance in Express and MySQL, tackling challenges and creating impactful solutions. Angular isn't just another framework to me; it's a reliable companion that enables me to craft interactive and user-friendly web experiences. As a MEAN stack aficionado, I'm here to turn ideas into digital realities.`;
   ngAfterViewInit(){
 
     let i = 0;
