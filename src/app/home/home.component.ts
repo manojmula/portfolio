@@ -214,28 +214,40 @@ export class HomeComponent {
   projects: Project[] = [
     {
       title: 'GVTkart',
-      description: 'A description of your project.',
+      description: 'An eCommerce application developed in Flutter for streamlined online shopping experiences.',
       image: 'gvtkart.webp',
       link: 'https://play.google.com/store/apps/details?id=com.gvtkart.gvt_kart'
     },
     {
       title: 'Subween ',
-      description: 'Another description of your project.',
+      description: 'A static website built as a demonstration of basic web development skills.',
       image: 'subween.png',
       link: 'https://subween.com/'
     },
     {
-      title: 'Approx Object',
-      description: 'Another description of your project.',
+      title: 'Approx Object npm Package',
+      description: 'Created the "Approx Object" npm package, a versatile JavaScript utility designed to convert arrays into objects and identify unique values in an array using object logic.',
       image: 'npm.png',
       link: 'https://www.npmjs.com/package/aproxobject'
     },
     {
-        title : 'Food Booking App',
-        description : 'Food Booking App',
+        title : ' Integrated POS and Food Ordering System',
+        description : 'Developed a comprehensive Angular-based POS system and a customer-centric Flutter food ordering app to streamline restaurant operations and elevate user experience.',
         image : 'food_booking.jpeg',
-        link : 'food.subween.com'
-    }
+        link : 'https://github.com/manojmula/vindoos_employee_front'
+    },
+    {
+        title : 'AI Trading Bot Using Brain.js',
+        description : ' Developed an intelligent trading bot leveraging Brain.js, a powerful JavaScript library for neural network training. The bot was designed to autonomously analyze and learn from a diverse dataset that included news data and historical stock market information.',
+        image : 'stock.png',
+        link : 'https://github.com/manojmula/automateTrading'
+    },
+    {
+      title : 'News List App',
+      description : 'An Angular front-end application, powered by Node.js, integrated with Google News for real-time updates. Allows region-based filtering and timeline view of news.',
+      image : 'newspaper.png',
+      link : 'https://github.com/manojmula/automateTrading'
+  }
     
     // Add as many projects as you need...
   ];
@@ -267,5 +279,10 @@ export class HomeComponent {
         console.log(input)
         // this.child.write(input);
     });
+  }
+
+  navigate(url :string)
+  {
+    window.open(url, '_blank')
   }
 }

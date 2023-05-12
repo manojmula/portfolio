@@ -400,6 +400,7 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    cursor: pointer;
   }
   
   .project-card {
@@ -437,9 +438,11 @@
   }
   
   .project-image {
-    width: 100%;
-    height: auto;
-    display: block;
+    display: inline-block;
+    align-items : center;
+    width: 10rem;
+    height: 10rem;
+    /* display: block; */
   }
   
   .project-card h3 {

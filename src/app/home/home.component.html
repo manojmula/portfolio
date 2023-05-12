@@ -65,12 +65,10 @@
   <section class="portfolio">
   <h2>Portfolio</h2>
   <div class="projects">
-    <div *ngFor="let project of projects" class="project-card">
-      <a href="{{project.link}}" target="_blank">
+    <div (click)="navigate(project.link)" *ngFor="let project of projects" class="project-card">
         <img [src]="'assets/images/' + project.image" alt="{{project.title}}" class="project-image">
         <h3>{{project.title}}</h3>
         <p>{{project.description}}</p>
-      </a>
     </div>
   </div>
 </section>
