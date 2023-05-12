@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 
 interface BlogPost {
   id: string;
+  content : '',
   title: string;
   date: Date;
 }
@@ -15,19 +16,20 @@ interface BlogPost {
 export class BlogComponent {
 
   postsPersonal: BlogPost[] = [
-    {id: 'schoolAhead', title: 'School Ahead of its time.', date: new Date(2022, 4, 15)},
+    {id: 'schoolAhead', content :'', title: 'School Ahead of its time.', date: new Date(2022, 4, 15)},
     // {id: 'riceBowlOfKarnataka', title: 'My Second Blog Post', date: new Date(2022, 5, 1)},
     // {id: 'BVBCollege', title: 'My Second Blog Post', date: new Date(2022, 5, 1)},
   ];
 
   postsProgramming : BlogPost[] = [
-    {id: 'whyMathInProgramming', title: 'Mathematics for programmers', date: new Date(2022, 4, 15)},
-    {id: 'ERPApplication', title: 'What makes application an ERP', date: new Date(2022, 5, 1)},
+    {id: 'whyMathInProgramming', content :'', title: 'Mathematics for programmers', date: new Date(2022, 4, 15)},
+    {id: 'ERPApplication', content :'', title: 'What makes application an ERP', date: new Date(2022, 5, 1)},
     // {id: 'podcastsThatInterestsMe', title: 'My Second Blog Post', date: new Date(2022, 5, 1)},
-    {id: 'resourceOfSelfLearning', title: 'Resources for Self Learning', date: new Date(2022, 5, 1)},
-    {id: 'areNewsLettersRelevant', title: 'Are Newsletters still relevant?', date: new Date(2022, 5, 1)},
-    {id: 'isEuntrprunershipForEveryOne', title: 'Is euntrprunership is for everyone?', date: new Date(2022, 5, 1)},
-    {id: 'sequelizeOptionalParameters', title: 'Optional Parameters in Sequelize', date: new Date(2022, 5, 1)},
+    {id: 'resourceOfSelfLearning', content :'', title: 'Resources for Self Learning', date: new Date(2022, 5, 1)},
+    {id: 'areNewsLettersRelevant', content :'', title: 'Are Newsletters still relevant?', date: new Date(2022, 5, 1)},
+    {id: 'isEuntrprunershipForEveryOne', content :'', title: 'Is euntrprunership for everyone?', date: new Date(2022, 5, 1)},
+    {id: 'sequelizeOptionalParameters', content :'', title: 'Optional Parameters in Sequelize', date: new Date(2022, 5, 1)},
+    {id: 'affectOfAIOnDevelopment', content :'', title: 'How Developer role is going to change with AI?', date: new Date(2022, 5, 1)},
 
   ];
 
