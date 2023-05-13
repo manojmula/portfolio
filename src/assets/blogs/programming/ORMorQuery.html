@@ -1,0 +1,21 @@
+<h1>Query or ORM: A Balanced Perspective</h1>
+
+<p>
+    The decision to write queries directly in the code or use an implementation of Object-Relational Mapping (ORM) often sparks debate. This decision primarily depends on the project's requirements, scale, the complexity of the SQL schema, and the comfort level of the developers.
+</p>
+
+<p>
+    The first ORM, as far as I know, was built in C++, and it's still in use today. Over time, several other ORMs have evolved, such as Hibernate. In the Node.js ecosystem, ORMs like Sequelize and Prisma are quite popular.
+</p>
+
+<p>
+    It's important to note that not all ORMs function identically. One of the primary advantages of an ORM is its ability to prevent, or at least mitigate, SQL injection attacks, as it usually takes on the responsibility of sanitizing input.
+</p>
+
+<p>
+    As for SQL errors, such as datatype inconsistencies and syntax mistakes, it is typically the developer's responsibility to handle these before they reach the SQL database. However, an ORM might catch these errors well before they reach the SQL server, which is a significant advantage.
+</p>
+
+<p>
+    Handling schema changes, particularly when your queries are scattered throughout the application, can be challenging. This issue may not be as problematic for mature applications that undergo fewer major changes. However, it can be a significant hurdle in the early stages of a project when substantial changes are more likely.
+</p>

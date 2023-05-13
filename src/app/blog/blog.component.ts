@@ -24,7 +24,7 @@ export class BlogComponent {
   postsProgramming : BlogPost[] = [
     {id: 'whyMathInProgramming', content :'', title: 'Mathematics for programmers', date: new Date(2022, 4, 15)},
     {id: 'ERPApplication', content :'', title: 'What makes application an ERP', date: new Date(2022, 5, 1)},
-    // {id: 'podcastsThatInterestsMe', title: 'My Second Blog Post', date: new Date(2022, 5, 1)},
+    {id: 'ORMorQuery',content : '', title: 'Query or ORM: A Balanced Perspective', date: new Date(2022, 5, 1)},
     {id: 'resourceOfSelfLearning', content :'', title: 'Resources for Self Learning', date: new Date(2022, 5, 1)},
     {id: 'areNewsLettersRelevant', content :'', title: 'Are Newsletters still relevant?', date: new Date(2022, 5, 1)},
     {id: 'isEuntrprunershipForEveryOne', content :'', title: 'Is euntrprunership for everyone?', date: new Date(2022, 5, 1)},
