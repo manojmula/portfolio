@@ -11,6 +11,7 @@ import { BlogComponent } from './blog/blog.component';
 import { ReadBlogComponent } from './read-blog/read-blog.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NgTerminalModule } from 'ng-terminal';
+import { FingerprintjsProAngularModule } from '@fingerprintjs/fingerprintjs-pro-angular';
 
 
 @NgModule({
@@ -23,6 +24,10 @@ import { NgTerminalModule } from 'ng-terminal';
   ],
   imports: [
     BrowserModule,
+    FingerprintjsProAngularModule.forRoot({loadOptions: {
+      apiKey: "en5IfhLlm6QiwsNnBOeQ",
+      region: "ap"
+    }}),
     FormsModule,
     AppRoutingModule,
     HttpClientModule,

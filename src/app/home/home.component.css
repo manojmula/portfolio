@@ -455,3 +455,60 @@
     color: #333;
   }
   
+  @keyframes loading {
+    0% { background-position: -100% 0; }
+    100% { background-position: 100% 0; }
+  }
+  
+  .visitor-info {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    width: 80%;
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    animation: loading 2s linear infinite;
+    background: linear-gradient(90deg, #f9f9f9 25%, #e0e0e0 50%, #f9f9f9 75%);
+    background-size: 200% 100%;
+  }
+  
+  .visitor-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    opacity: 0;
+    animation: 1s ease-out 0.5s 1 normal forwards running fadeIn;
+  }
+  
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  .detail {
+    color: #333;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .detail span {
+    color: #777;
+    font-weight: bold;
+  }
+  
+  .detail:hover {
+    color: #0088cc;
+  }
+  
+  .detail:hover span {
+    color: #005999;
+  }
+  
+  .icon-img
+  {
+    width: 2rem;
+  }

@@ -1,6 +1,8 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { NgTerminal, NgTerminalModule } from 'ng-terminal';
+import { LocationService } from '../location-service.service';
+import { FingerprintjsProAngularService } from '@fingerprintjs/fingerprintjs-pro-angular';
 
 
 interface Skill {
@@ -34,17 +36,61 @@ interface BlogPost {
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit{
   isUserInteraction = false;
 
 
   constructor(
-    private route : ActivatedRoute
+    private route : ActivatedRoute,
+    private locationService : LocationService,
+    private fingerprintjsProAngularService: FingerprintjsProAngularService
   )
   {
    
+  }
+   userLocation : any ;
+  ngOnInit(): void {
+    this.countUserVisits()
+    this.getLocation()
+      this.locationService.getGeoLocationFromIP()
+      .subscribe((location)=>{
+        console.log(location)
+        this.userLocation = location
+      },
+      (error)=>{
+        console.log(error)
+      })
+
+      
+  }
+
+  visitorId  :any;
+  extendedResult : any;
+  async getLocation()
+  {
+    const data : any = await this.fingerprintjsProAngularService.getVisitorData();
+    this.visitorId = data.visitorId;
+    this.extendedResult = data;
+    console.log(data)
+  }
+
+  visitCount : any;
+  countUserVisits()
+  {
+    if (localStorage) {
+      if (localStorage.getItem('visitCount')) {
+        this.visitCount = parseInt(localStorage.getItem('visitCount') as string);
+        this.visitCount += 1;
+        localStorage.setItem('visitCount', this.visitCount.toString());
+      } else {
+        localStorage.setItem('visitCount', '1');
+        this.visitCount = 1;
+      }
+    } else {
+      console.log('Sorry, your browser does not support Web Storage...');
+    }
   }
   
   scrollToPortfolio() {
