@@ -2,7 +2,6 @@
     <h2>Currency Converter</h2>
     <div class="select-group">
       <div class="select-box">
-        <span>1</span>
         <label>From:</label>
         <select [(ngModel)]="fromCountry" (change)="convertCurrency()">
           <option *ngFor="let country of countries | keyvalue" [value]="country.key">{{ country.value }}</option>
