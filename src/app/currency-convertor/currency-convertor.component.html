@@ -1,0 +1,23 @@
+<div class="converter">
+    <h2>Currency Converter</h2>
+    <div class="select-group">
+      <div class="select-box">
+        <span>1</span>
+        <label>From:</label>
+        <select [(ngModel)]="fromCountry" (change)="convertCurrency()">
+          <option *ngFor="let country of countries | keyvalue" [value]="country.key">{{ country.value }}</option>
+        </select>
+      </div>
+      <div class="select-box">
+        <label>To:</label>
+        <select [(ngModel)]="toCountry" (change)="convertCurrency()">
+          <option *ngFor="let country of countries | keyvalue" [value]="country.key">{{ country.value }}</option>
+        </select>
+      </div>
+    </div>
+    <div class="result-box">
+      <p>Conversion Rate:</p>
+      <h3 class="conversion-rate">{{ conversionRate }}</h3>
+    </div>
+  </div>
+  

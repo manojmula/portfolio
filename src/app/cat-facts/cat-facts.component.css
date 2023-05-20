@@ -1,0 +1,24 @@
+.fact-card {
+    margin: 1em auto;
+    padding: 1em;
+    max-width: 600px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+    background-color: #ffffff;
+  }
+  
+  .fact-card h3 {
+    color: #333333;
+    margin-bottom: 0.5em;
+  }
+  
+  .fact-card p {
+    color: #666666;
+    font-size: 1.1em;
+    line-height: 1.6em;
+  }
+
+  h2 {
+    text-align: center;
+  }
+  

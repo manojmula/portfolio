@@ -12,6 +12,9 @@ import { ReadBlogComponent } from './read-blog/read-blog.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NgTerminalModule } from 'ng-terminal';
 import { FingerprintjsProAngularModule } from '@fingerprintjs/fingerprintjs-pro-angular';
+import { CatFactsComponent } from './cat-facts/cat-facts.component';
+import { CurrencyConvertorComponent } from './currency-convertor/currency-convertor.component';
+import { EntertainmentComponent } from './entertainment/entertainment.component';
 
 
 @NgModule({
@@ -20,7 +23,10 @@ import { FingerprintjsProAngularModule } from '@fingerprintjs/fingerprintjs-pro-
     HeaderComponent,
     HomeComponent,
     BlogComponent,
-    ReadBlogComponent
+    ReadBlogComponent,
+    CatFactsComponent,
+    CurrencyConvertorComponent,
+    EntertainmentComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +37,8 @@ import { FingerprintjsProAngularModule } from '@fingerprintjs/fingerprintjs-pro-
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
-    NgTerminalModule
+    NgTerminalModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

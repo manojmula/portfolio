@@ -1,0 +1,9 @@
+<div>
+    <h2>Radom Cat Facts</h2>
+    <div class="fact-card" *ngFor="let item of catFactsAndImages">
+        <img [src]="item.imageUrl" alt="Cat says hello world" width="100%">
+        <h3>Cat Fact:</h3>
+        <p>{{ item.fact }}</p>
+      </div>    
+</div>
+  

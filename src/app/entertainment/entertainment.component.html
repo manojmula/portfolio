@@ -1,0 +1,7 @@
+<div class="carousel">
+    <div *ngFor="let item of data; let i = index" [ngClass]="{'carousel-item': true, 'active': i === currentSlide}">
+      <img [src]="item.url" alt="{{item.title}}">
+      <h2>{{ item.name }}</h2>
+    </div>
+  </div>
+  

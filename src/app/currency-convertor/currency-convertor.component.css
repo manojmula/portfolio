@@ -1,0 +1,43 @@
+.converter {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    background: white;
+  }
+  
+  .converter h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #333;
+  }
+  
+  .select-group {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .select-box {
+    width: 45%;
+  }
+  
+  .select-box select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .result-box {
+    margin-top: 2rem;
+    text-align: center;
+  }
+  
+  .result-box h3 {
+    color: #f35b04;
+    font-size: 2rem;
+    margin: 0;
+  }
+  
